@@ -1,7 +1,6 @@
 using UnityEngine;
 
 
-
 // SKIP Lecture ...
 namespace Assignment.StudentSolution.LCT02
 {
@@ -17,26 +16,27 @@ namespace Assignment.StudentSolution.LCT02
 
         // สร้าง constructor ที่รับ parameter 3 ตัว และกำหนดค่าให้กับ properties ของ class
         // โดยทั้ง 3 parameter คือ name, breed, age ตามลำดับ
-        public Dog()
+        public Dog(string myName , int age)
         {
-
+            name = myName;
+            this.age = age;
         }
 
         /// behaviors ...
 
         public void Bark()
         {
-
+            Debug.Log($"{name} is barking");
         }
 
         public void WagTail()
         {
-
+            Debug.Log($"{name} is wagging");
         }
 
         public void StopBarking()
         {
-
+            Debug.Log($"{name} is stopped");
         }
 
         // end of behaviors ...
@@ -54,10 +54,11 @@ namespace Assignment.StudentSolution.LCT02
 
             // Student code starts HERE ...
             // ...
-
+            dog1 = new Dog("Buddy", 100);
             // ...
             // Student code ends HERE ...
 
+           // var dog2 = new Dog("Puddy");
             // เรียกใช้ method ของ object นั้น
 
             dog1.Bark();
